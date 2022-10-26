@@ -22,7 +22,7 @@ public class Exercise_05 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         // prompt user
-        System.out.print("Enter two numbers " + "(press enter after each number): ");
+        System.out.println("Enter two numbers " + "(press enter after each number): ");
         // assign input to variable as int
         int n1, n2, total;
         n1 = scanner.nextInt();
