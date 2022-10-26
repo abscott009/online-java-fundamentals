@@ -1,5 +1,7 @@
 package labs_examples.conditions_loops.labs;
 
+import java.util.Scanner;
+
 /**
  * Conditions and Loops Exercise 5: Calculator
  *
@@ -16,4 +18,22 @@ package labs_examples.conditions_loops.labs;
  */
 
 public class Exercise_05 {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        // prompt user
+        System.out.print("Enter two numbers " + "(press enter after each number): ");
+        // assign input to variable as int
+        int n1, n2, total;
+        n1 = scanner.nextInt();
+        n2 = scanner.nextInt();
+        total = 0;
+
+        for(int i = n1 ; i <= n2; i++)
+            total = total+i;
+        System.out.print("Total:" + total);
+
+    }
+
+
 }
