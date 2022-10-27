@@ -29,11 +29,27 @@ public class Exercise_05 {
         n2 = scanner.nextInt();
         total = 0;
 
-        for(int i = n1 ; i <= n2; i++)
-            total = total+i;
-        System.out.print("Total:" + total);
+        for(int i = n1 ; i <= n2; i++) {
+            total = total + i;
+        }
+        System.out.println("Total:" + total);
 
+        double avg = 0;
+        int add = 0;
+        int den = n2 - n1;
+
+        double total2 = n1;
+        int numsBetween = 1;
+
+        for (int i = n1 + 1; i <= n2; i++) {
+            total2 += i;
+            numsBetween++;
+        }
+
+        avg = total2 / numsBetween;
+        System.out.println("Average:" + avg);
+        }
     }
 
 
-}
+
