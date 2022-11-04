@@ -10,4 +10,18 @@ package labs_examples.arrays.labs;
 
 public class Exercise_05 {
 
+    public static void main(String[] args) {
+
+        String[] dogs = new String[]{"Bruno", "JJ", "Beta", "Sylvie" };
+
+        int n = dogs.length;
+
+        for (int i = n - 1; i >= 0; i--) {
+// can't figure every other
+            System.out.println(dogs[i]);
+        }
+    }
+
 }
+
+
