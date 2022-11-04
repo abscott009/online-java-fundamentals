@@ -10,4 +10,22 @@ package labs_examples.arrays.labs;
 
 public class Exercise_04 {
 
+    public static void main(String[] args){
+
+        int[][] iarray = {
+                {64,453},
+                {54, 45, 15},
+                {465, 23}
+        };
+
+        for (int[] outer : iarray){
+
+            for(int val : outer){
+
+                System.out.println(val + "");
+            }
+        }
+
+    }
+
 }
