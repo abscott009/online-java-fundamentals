@@ -18,6 +18,29 @@ package labs_examples.arrays.labs;
 public class Exercise_03 {
 
     public static void main(String[] args) {
-        
+
+        int currentCount = 0;
+
+        int[][] three = new int[5][5];
+
+        for (int i = 0; i <= three.length-1; i++) {
+
+           for (int x = 0; x <= three[i].length-1; x++) {
+
+               three[i][x] = currentCount + x * 3 + 3;
+
+               if (x == three.length-1){
+                   currentCount = three[i][x];
+               }
+
+               System.out.print(three[i][x] + "| ");
+
+               //System.out.print(i * x + "| ");
+
+            }
+
+           System.out.println();
+
+        }
     }
-}
+    }

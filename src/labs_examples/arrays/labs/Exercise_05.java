@@ -16,7 +16,7 @@ public class Exercise_05 {
 
         int n = dogs.length;
 
-        for (int i = n - 1; i >= 0; i--) {
+        for (int i = n - 1; i >= 0; i-=2) {
 // can't figure every other
             System.out.println(dogs[i]);
         }
