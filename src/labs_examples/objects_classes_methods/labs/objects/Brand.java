@@ -3,7 +3,9 @@ package labs_examples.objects_classes_methods.labs.objects;
 public class Brand {
 
     public Brand(String airline, String manufacturer, String model){
-
+        this.airline = airline;
+        this.manufacturer = manufacturer;
+        this.model = model;
     }
     private String airline;
     private String manufacturer;

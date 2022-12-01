@@ -41,7 +41,10 @@ public class Capacity {
     }
 
     public Capacity(double fuelCapacity, double currentFuelLevel, int passengers, double cargoWeight) {
-
+        this.fuelCapacity = fuelCapacity;
+        this.currentFuelLevel = currentFuelLevel;
+        this.passengers = passengers;
+        this.cargoWeight = cargoWeight;
     }
 
 

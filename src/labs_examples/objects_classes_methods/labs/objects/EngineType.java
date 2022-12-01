@@ -1,36 +1,24 @@
 package labs_examples.objects_classes_methods.labs.objects;
 
 public class EngineType {
- public EngineType(boolean jet, boolean prop){
-
- }
-
-   private boolean jet;
-
-    public boolean isJet() {
-        return jet;
+    public EngineType(String engine) {
+        this.engine = engine;
     }
 
-    public void setJet(boolean jet) {
-        this.jet = jet;
+    private String engine;
+
+    public String getEngine() {
+        return engine;
     }
 
-   private boolean prop;
-
-    public boolean isProp() {
-        return prop;
-    }
-
-    public void setProp(boolean prop) {
-        this.prop = prop;
+    public void setEngine(String engine) {
+        this.engine = engine;
     }
 
     @Override
     public String toString() {
         return "EngineType{" +
-                "jet=" + jet +
-                ", prop=" + prop +
+                "engine='" + engine + '\'' +
                 '}';
     }
 }
-
