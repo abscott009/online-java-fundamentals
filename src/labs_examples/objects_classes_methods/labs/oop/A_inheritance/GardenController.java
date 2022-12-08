@@ -2,20 +2,21 @@ package labs_examples.objects_classes_methods.labs.oop.A_inheritance;
 
 public class GardenController {
 
-   public void Garden(String[] args){
+   public static void main(String[] args) {
 
       Plants plants = new Plants();
-      Flowering flowering = new Flowering();
+
+      plants.grow();
+
+      Flower flower = new Flower();
+
+      flower.grow();
+
       Vegetables vegetables = new Vegetables();
 
-
-       System.out.print(plants);
-       System.out.print(flowering);
-       System.out.print(vegetables);
+      vegetables.grow();
 
    }
 
+   }
 
-
-
-}

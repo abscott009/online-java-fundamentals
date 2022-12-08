@@ -3,7 +3,8 @@ package labs_examples.objects_classes_methods.labs.oop.A_inheritance;
 /**
  * Why does the output print in the order it does?
  *
- * You answer:
+ * You answer: It prints in the order of operations. The main(), which only creates object 'c', does not affect the
+ * output statements nor the order.
  *
  */
 

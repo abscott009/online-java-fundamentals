@@ -5,9 +5,10 @@ public class Plants {
     private String name;
     private double phSoil = 7;
     private int waterFrequency = 7;
-    private boolean fertilizer = false;
 
-
+    public void grow() {
+        System.out.println("grow");
+    }
 
     public String getName() {
         return name;
@@ -33,25 +34,8 @@ public class Plants {
         this.waterFrequency = waterFrequency;
     }
 
-    public boolean isFertilizer() {
-        return fertilizer;
-    }
-
-    public void setFertilizer(boolean fertilizer) {
-        this.fertilizer = fertilizer;
-    }
-
-    public Plants() {
-
-    }
-    public Plants (String name, double phSoil, int waterFrequency, boolean fertilizer){
-        this.name = name;
-        this.phSoil = phSoil;
-        this.waterFrequency = waterFrequency;
-        this.fertilizer = fertilizer;
-    }
-
-    public void bloom(){
-        System.out.println("Time to bloom... ");
+    public Plants(){
+        phSoil = 7.4;
+        waterFrequency = 3;
     }
 }
