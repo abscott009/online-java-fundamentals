@@ -13,10 +13,16 @@ public class Card {
     public Card(String suit, String rank) {
     }
 
+    public Card() {
+
+    }
+
     public void cardDeck() {
         for (int i = 0; i < suit.length; i++) {
             for (int j = 0; j < rank.length; j++) {
                 this.cards.add(new Card(suit[i], rank[j]));
+
+                System.out.println(cards);
             }
         }
     }

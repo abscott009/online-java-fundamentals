@@ -6,5 +6,9 @@ public class BlackjackController {
 
         int index = (int) (Math.random() * 52);
 
+        Card cardList = new Card();
+
+        cardList.cardDeck();
+
     }
 }
