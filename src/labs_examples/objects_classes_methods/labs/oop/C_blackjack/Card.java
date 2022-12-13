@@ -4,23 +4,21 @@ import java.util.ArrayList;
 
 public class Card {
 
-    char[] suit = new char[]{'♠', '♦', '♥', '♣'};
-    String[] face = new String[]{"A","2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
+    String[] suit = new String[]{"♠", "♦", "♥", "♣"};
+    String[] rank = new String[]{"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" };
     int cardValue;
 
-    static ArrayList<String> deck = new ArrayList<String>();
+    ArrayList<Card> cards = new ArrayList<Card>();
 
-    public void populateDeck(char[] suit, String[] face){
-        for(char s : suit) {
-            for (String f : face) {
-                String card = f + " of " + s;
-                deck.add;
-
-            }
-
-
-       }
-   }
-
+    public Card(String suit, String rank) {
     }
+
+    public void cardDeck() {
+        for (int i = 0; i < suit.length; i++) {
+            for (int j = 0; j < rank.length; j++) {
+                this.cards.add(new Card(suit[i], rank[j]));
+            }
+        }
+    }
+}
 
