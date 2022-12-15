@@ -9,6 +9,7 @@ public class Player {
         String name;
         Hand hand;
         int potValue;
+//Create Player "Name"
 
         Scanner obj = new Scanner(System.in);
 
@@ -16,6 +17,18 @@ public class Player {
 
         name = obj.nextLine();
 
+        //Player Pot
+            //wager
+                //wager to temp 'bet' separate from Pot
+            //second bets - *conditional based on Hand
+                //Double, split optional bets
+
+        //Player choice hit or stand
+
+//        public void hit() {
+//            hand.cards.add(deck.GetCard())
+        }
+
     }
 
-}
+

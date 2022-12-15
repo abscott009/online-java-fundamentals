@@ -1,48 +1,47 @@
 package labs_examples.objects_classes_methods.labs.oop.C_blackjack;
 
-import java.util.ArrayList;
-import java.util.Random;
-
 public class Deck extends Card {
+    //Create Deck
 
-    Card[] cards = new Card[52];
-    ArrayList<Integer> usedCards;
+    public Card[][] deck;
+    public static final int num_suits = Suit.values().length;
+    public static final int num_ranks = Rank.values().length;
 
-    public class CardsDeck {
-        private ArrayList<Card> mCards;
-        private ArrayList<Card> mPulledCards;
-        private Random mRandom;
+    public Deck() {
+        super();
+        deck = new Card[num_suits][num_ranks];
 
+        Rank[] ranks = Rank.values();
+        Suit[] suits = Suit.values();
 
-//    int[] deck = new int[52];
+        for (int i = 0; i < num_suits; i++) {
+            Suit suit = suits[i];
+            for (int j = 0; j < num_ranks; j++) {
+                Rank rank = ranks[j];
+                deck[i][j] = new Card(suit, rank);
+
+                System.out.println(rank + " of " + suit);
+            }
+
+        }
+    }
+}
+
+//    ArrayList<Card> deck = new ArrayList<>();
+//    getSuit();
+//    getRank();
+////Shuffle/Randomize Deck
+//    public void cardDeck() {
+//        for (int i = 0; i < suits.length; i++) {
+//            for (int j = 0; j < rank.length; j++) {
+//                this.deck.add(new Card(suits[i], rank[j]));
 //
-//        for(int i = 0; i <= deck.length; i++) {
-//            deck[i] = i;
+//            }
 //        }
-//
+//    }
 //        for(int i = 0; i < deck.length; i++){
 //            int index = (int)(Math.random() * deck.length);
 //            int temp = deck[i];
-
-//        }
-//    public void CardsDeck() {
-//        mRandom = new Random();
-//        mPulledCards = new ArrayList<Card>();
-//        mCards = new ArrayList<Card>(Suit.values().length * Rank.values().length);
-//        reset();
+//
 //    }
-//
-//    public void reset() {
-//        mPulledCards.clear();
-//        mCards.clear();
-//        /* Creating all possible cards... */
-//        for (Suit s : Suit.values()) {
-//            for (Rank r : Rank.values()) {
-//                Card c = new Card(s, r);
-//                mCards.add(c);
-//            }
-//
-//        }
-//
-    }
-}
+//}
