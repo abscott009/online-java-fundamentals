@@ -1,5 +1,7 @@
 package labs_examples.objects_classes_methods.labs.oop.C_blackjack;
 
+import java.util.Arrays;
+
 public class Deck extends Card {
     //Create Deck
 
@@ -20,7 +22,7 @@ public class Deck extends Card {
                 Rank rank = ranks[j];
                 deck[i][j] = new Card(suit, rank);
 
-                System.out.println(rank + " of " + suit);
+                System.out.println(Arrays.toString(deck[j]) + " of " + Arrays.toString(deck[j]));
             }
 
         }
