@@ -1,13 +1,11 @@
 package labs_examples.objects_classes_methods.labs.oop.C_blackjack;
 
-import java.util.Arrays;
-
 public class Deck extends Card {
     //Create Deck
 
     public Card[][] deck;
-    public static final int num_suits = Suit.values().length;
-    public static final int num_ranks = Rank.values().length;
+    public int num_suits = Suit.values().length;
+    public int num_ranks = Rank.values().length;
 
     public Deck() {
         super();
@@ -22,7 +20,9 @@ public class Deck extends Card {
                 Rank rank = ranks[j];
                 deck[i][j] = new Card(suit, rank);
 
-                System.out.println(Arrays.toString(deck[j]) + " of " + Arrays.toString(deck[j]));
+               // System.out.println("Num suits: " + num_suits);
+                System.out.println("Num ranks: " + num_ranks);
+               // System.out.println(rank + " of " + suit);
             }
 
         }

@@ -47,8 +47,32 @@ public class Card {
     }
 
 
-}
-
+    }
+//    String[] rank = new String[]{"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" };
+//
+//
+//    public static int parseInt(String rank){
+//        int cardValue = Integer.parseInt(rank);
+//    }
+//
+//    public Card() {
+//    }
+//
+//    public Card(String suit, String rank) {
+//        this.suit = suit;
+//        this.face = rank;
+//
+//        switch(face) {
+//            case "A":
+//                boolean A = true;
+//                break;
+//            case "J":
+//            case "Q":
+//            case "K":
+//                    this.value = "10";
+//        }
+//        this.face = value;
+//    }
 
 
 
