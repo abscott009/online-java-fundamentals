@@ -20,30 +20,12 @@ public class Deck extends Card {
                 Rank rank = ranks[j];
                 deck[i][j] = new Card(suit, rank);
 
-               // System.out.println("Num suits: " + num_suits);
-                System.out.println("Num ranks: " + num_ranks);
-               // System.out.println(rank + " of " + suit);
+
             }
 
         }
     }
+
 }
 
-//    ArrayList<Card> deck = new ArrayList<>();
-//    getSuit();
-//    getRank();
-////Shuffle/Randomize Deck
-//    public void cardDeck() {
-//        for (int i = 0; i < suits.length; i++) {
-//            for (int j = 0; j < rank.length; j++) {
-//                this.deck.add(new Card(suits[i], rank[j]));
-//
-//            }
-//        }
-//    }
-//        for(int i = 0; i < deck.length; i++){
-//            int index = (int)(Math.random() * deck.length);
-//            int temp = deck[i];
-//
-//    }
-//}
+
