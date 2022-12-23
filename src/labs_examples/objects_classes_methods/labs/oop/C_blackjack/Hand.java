@@ -7,4 +7,9 @@ public class Hand {
     ArrayList<Card> cards;
     int handValue;
 
+    public boolean calculateTotal() {
+    }
+
+    public void addCard(Object nextCard) {
+    }
 }

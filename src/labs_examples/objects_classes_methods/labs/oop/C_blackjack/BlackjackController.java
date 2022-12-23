@@ -1,29 +1,92 @@
 package labs_examples.objects_classes_methods.labs.oop.C_blackjack;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 public class BlackjackController {
 
-    public static class Dealer{
-        public void Dealer() {
-            String dealer;
-            Hand hand = null;
+
+    public static List<Player> populateTable() {
+        List<String> playerNames = new ArrayList<>();
+
+        List<Player> table = new ArrayList<>();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Number of players at table: ");
+        int numPlayers = sc.nextInt();
+
+        for (int loop = 1; loop <= numPlayers; loop += 1) {
+            boolean nameValid = false;
+
+            while(!nameValid) {
+                System.out.println("Player " + loop + " please enter your name");
+                String playerName = sc.next();
+
+                if (playerNames.contains(playerName)) {
+                    System.out.println("Different name");
+                    continue;
+                }
+
+                if (playerName.length() > 0) {
+                    playerNames.add(playerName);
+
+                    nameValid = true;
+                }
+            }
+        }
+
+        sc.close();
+
+        for (String playerName : playerNames) {
+            Player player = new Player();
+            player.setName(playerName);
+            table.add(player);
+        }
+
+        return table;
     }
 
+            public static Deck shuffle(Deck deck){
+        Card[][] cards = deck.getDeck();
+        for (int i = 0; i < cards.length; i++) {
+            for (int j = 0; j < cards[i].length; j++) {
+                cards[i][j] = 5;// ... random number between 1 and 13
+            }
+        }
+        deck.setDeck(cards);
+        return deck;
     }
+        public static void main(String[] args) {
 
-    public static void main(String[] args) {
-        //new game
-        // player entry
+                //new game
+                // player entry
 //        System.out.println("Welcome to Blackjack!");
 //
 //        List<Player> table = populateTable();
 
-        //start game
+                //start game
 
-        //Player
-        //place bet - temp hold from pot
+                //Player
+                //place bet - temp hold from pot
+                Player player = new Player();
+                while (player.pot > 0){
 
-        //shuffle deck
+                        System.out.println("Place your bet (type 0 to exit): ");
+                        Scanner sc = new Scanner(System.in);
+                        int bet = sc.nextInt();
+                        int count = 0;
 
+                        if (bet > player.pot || bet < 0)
+                                continue;
+                        while (true) {
+
+                        }
+
+
+                }
+
+                //Deal cards to player(s)
+        }
 
 
 //
@@ -65,46 +128,7 @@ public class BlackjackController {
 
         // Evaluate player vs dealer
         //
+}
 
 
-//    public static List<Player> populateTable() {
-//        List<String> playerNames = new ArrayList<>();
-//
-//        List<Player> table = new ArrayList<>();
-//        Scanner sc = new Scanner(System.in);
-//        System.out.println("Number of players at table: ");
-//        int numPlayers = sc.nextInt();
-//
-//        for (int loop = 1; loop <= numPlayers; loop += 1) {
-//            boolean nameValid = false;
-//
-//            while(!nameValid) {
-//                System.out.println("Player " + loop + " please enter your name");
-//                String playerName = sc.next();
-//
-//                if (playerNames.contains(playerName)) {
-//                    System.out.println("Different name");
-//                    continue;
-//                }
-//
-//                if (playerName.length() > 0) {
-//                    playerNames.add(playerName);
-//
-//                    nameValid = true;
-//                }
-//            }
-//        }
-//
-//        sc.close();
-//
-//        for (String playerName : playerNames) {
-//            Player player = new Player();
-//            player.setName(playerName);
-//            table.add(player);
-//        }
-//
-//        return table;
-//    }
-    }
-    }
 

@@ -19,13 +19,21 @@ public class Deck extends Card {
             for (int j = 0; j < num_ranks; j++) {
                 Rank rank = ranks[j];
                 deck[i][j] = new Card(suit, rank);
-
-
+                
             }
-
+            
         }
     }
 
+    public Card[][] getDeck() {
+        return deck;
+    }
+
+    public void setDeck(Card[][] cards) {
+    }
+
+    public Object nextCard() {
+    }
 }
 
 

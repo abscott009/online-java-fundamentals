@@ -6,7 +6,7 @@ public class Player {
     public void Player(String name) {
         this.name = name;
         Hand hand = null;
-        int potValue = 100;
+        int pot = 100;
     }
 
     public void setName(String name) {
