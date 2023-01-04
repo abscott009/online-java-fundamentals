@@ -1,39 +1,55 @@
 package labs_examples.objects_classes_methods.labs.oop.C_blackjack;
 
-public class Deck extends Card {
-    //Create Deck
+import java.util.ArrayList;
+import java.util.List;
 
-    public Card[][] deck;
-    public int num_suits = Suit.values().length;
-    public int num_ranks = Rank.values().length;
+public class Deck {
+    //Create Deck
+    List<Card> deckBuilt = new ArrayList<>();
+    static char[] suits = new char[]{'♠', '♦', '♥', '♣'};
+
+    //   private static Suit cardSuit;
+
+    @Override
+    public String toString() {
+        return "Deck{" +
+                "deckBuilt=" + deckBuilt +
+                ", num_suits=" + num_suits +
+                ", num_ranks=" + num_ranks +
+                '}';
+    }
+
+    static String[] ranks = new String[]{"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
+    public int num_suits = suits.length;
+    public int num_ranks = ranks.length;
+
 
     public Deck() {
-        super();
-        deck = new Card[num_suits][num_ranks];
+        for (char suit : suits) {
+            for (int cardValue = 1; cardValue <= 13; cardValue++) {
+                // create a new card
+                Card newCard = new Card(cardValue, suit);
 
-        Rank[] ranks = Rank.values();
-        Suit[] suits = Suit.values();
+                // add new card to running list of cards
+                deckBuilt.add(newCard);
 
-        for (int i = 0; i < num_suits; i++) {
-            Suit suit = suits[i];
-            for (int j = 0; j < num_ranks; j++) {
-                Rank rank = ranks[j];
-                deck[i][j] = new Card(suit, rank);
-                
             }
-            
         }
     }
 
-    public Card[][] getDeck() {
-        return deck;
+    public List<Card> getCards() {
+        return deckBuilt;
     }
 
-    public void setDeck(Card[][] cards) {
-    }
 
-    public Object nextCard() {
-    }
+        public Card dealOneCard (){
+            int max = deckBuilt.size() - 1;
+            int min = 0;
+        int RandomIndex = (int) (Math.random() * (max - min + 1) + min);
+        Card card = deckBuilt.get(RandomIndex);
+        deckBuilt.remove(RandomIndex);
+
+        return card;
+       }
 }
-
 

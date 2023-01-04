@@ -1,16 +1,12 @@
 package labs_examples.objects_classes_methods.labs.oop.C_blackjack;
 
-public class Card {
+public class ExampleCard {
+    private int value;
+    private char suit;
 
-    private static int value;
-    private static char suit;
-
-    public Card(int cardValue, char suit) {
-        this.value = cardValue;
+    public ExampleCard(int newCardValue, char suit) {
+        this.value  = newCardValue;
         this.suit = suit;
-    }
-
-    public Card() {
     }
 
     public int getValue() {
@@ -29,9 +25,3 @@ public class Card {
         this.suit = suit;
     }
 }
-
-
-
-
-
-

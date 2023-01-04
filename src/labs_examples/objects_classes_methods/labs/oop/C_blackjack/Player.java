@@ -1,21 +1,51 @@
 package labs_examples.objects_classes_methods.labs.oop.C_blackjack;
 
 public class Player {
-    String name;
 
-    public void Player(String name) {
+    private Hand hand;
+    private String name;
+    private int wallet;
+
+    public Player() {
+
+    }
+
+
+    public Hand getHand() {
+        return hand;
+    }
+
+    public  void setHand(Hand hand) {
+        this.hand = hand;
+    }
+
+    public int getWallet() {
+        return wallet;
+    }
+
+    public void setWallet(int wallet) {
+        this.wallet = wallet;
+    }
+
+    public Player(String name, int wallet) {
         this.name = name;
-        Hand hand = null;
-        int pot = 100;
+        this.hand = new Hand();
+        this.wallet = 100;
     }
 
-    public void setName(String name) {
+        public void setName(String name) {
         this.name = name;
     }
+    public String getName() {
 
-    private String playerName() {
-        return playerName();
+        return name;
     }
+
+        public int addOneCard(Card card) {
+        return hand.addOneCard(card);
+    }
+
+
 
 
 }
