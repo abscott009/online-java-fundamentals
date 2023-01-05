@@ -2,8 +2,8 @@ package labs_examples.objects_classes_methods.labs.oop.C_blackjack;
 
 public class Card {
 
-    private static int value;
-    private static char suit;
+    private int value;
+    private char suit;
 
     public Card(int cardValue, char suit) {
         this.value = cardValue;

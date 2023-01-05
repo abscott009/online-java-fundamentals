@@ -20,13 +20,13 @@ public class Deck {
     }
 
     static String[] ranks = new String[]{"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
-    public int num_suits = suits.length;
-    public int num_ranks = ranks.length;
+    public static int num_suits = suits.length;
+    public static int num_ranks = ranks.length;
 
 
     public Deck() {
         for (char suit : suits) {
-            for (int cardValue = 1; cardValue <= 13; cardValue++) {
+            for (int cardValue = 1; cardValue <= ranks.length; cardValue++) {
                 // create a new card
                 Card newCard = new Card(cardValue, suit);
 
@@ -51,5 +51,7 @@ public class Deck {
 
         return card;
        }
+
+
 }
 

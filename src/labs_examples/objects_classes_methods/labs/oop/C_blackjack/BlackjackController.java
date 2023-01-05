@@ -55,6 +55,7 @@ public class BlackjackController {
         Deck deck = new Deck();
         Player player = new Player();
         Player dealer = new Player();
+
 //        for (Card card : deck.getCards()) {
 //            System.out.println(card.getValue() +  " " + card.getSuit());
 //        }

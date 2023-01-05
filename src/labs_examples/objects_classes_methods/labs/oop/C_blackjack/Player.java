@@ -10,6 +10,11 @@ public class Player {
 
     }
 
+    public Player(String name, int wallet) {
+        this.name = name;
+        this.hand = new Hand();
+        this.wallet = 100;
+    }
 
     public Hand getHand() {
         return hand;
@@ -27,11 +32,7 @@ public class Player {
         this.wallet = wallet;
     }
 
-    public Player(String name, int wallet) {
-        this.name = name;
-        this.hand = new Hand();
-        this.wallet = 100;
-    }
+
 
         public void setName(String name) {
         this.name = name;
