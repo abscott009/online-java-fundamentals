@@ -7,12 +7,11 @@ public class ClassTwo {
     ClassOne one = new ClassOne();
 
     public String classTwo(){
-        System.out.println(one.classOne());
-        return System.out.println(one.classOne());
+         return one.classOne();
+         // cannot print due to protected modifier in ClassOne()
     }
 
     public String fourthMethod(){
-        System.out.println(one.secondMethod());
         return one.secondMethod();
     }
 }

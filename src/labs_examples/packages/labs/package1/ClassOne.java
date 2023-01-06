@@ -20,7 +20,9 @@ public class ClassOne {
         ClassOne one = new ClassOne();
         ClassTwo two = new ClassTwo();
 
+        System.out.println(one.classOne());
         System.out.println(one.secondMethod());
+        System.out.println(two.fourthMethod());
         System.out.println(two.classTwo());
 
 
