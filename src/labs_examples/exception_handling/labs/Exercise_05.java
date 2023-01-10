@@ -1,7 +1,5 @@
 package labs_examples.exception_handling.labs;
 
-import java.util.Arrays;
-
 /**
  * Exception Handling Exercise 5:
  *
@@ -9,10 +7,30 @@ import java.util.Arrays;
  *
  */
 
-class Example {
+class ExceptionLabFive {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ArrayIndexOutOfBoundsException {
+
+
+        System.out.println(ExceptionLabFive.Math(5));
 
     }
 
+    private static int Math(Integer index) throws ArrayIndexOutOfBoundsException {
+
+        int[] count = {1, 2, 3, 4, 5};
+
+        int x = 0;
+
+        try {
+
+            x = count[2] * count[index];
+
+        } catch (ArrayIndexOutOfBoundsException a) {
+            System.out.println("You accessed something out of bounds");
+        }
+
+        return x;
+    }
 }
+

@@ -6,10 +6,10 @@ public class ClassTwo {
 
     ClassOne one = new ClassOne();
 
-    public String classTwo(){
-         return one.classOne();
+ //   public String classTwo(){
+ //        return one.classOne();
          // cannot print due to protected modifier in ClassOne()
-    }
+ //   }
 
     public String fourthMethod(){
         return one.secondMethod();

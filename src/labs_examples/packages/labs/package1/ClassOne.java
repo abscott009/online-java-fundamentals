@@ -23,7 +23,7 @@ public class ClassOne {
         System.out.println(one.classOne());
         System.out.println(one.secondMethod());
         System.out.println(two.fourthMethod());
-        System.out.println(two.classTwo());
+  //      System.out.println(two.classTwo());
 
 
     }
