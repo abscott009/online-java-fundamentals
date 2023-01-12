@@ -8,27 +8,22 @@ public class Hand {
     private List<Card> cards;
 
     public Hand() {
-        this.cards = new ArrayList<>();
+        cards = new ArrayList<>();
     }
 
     public int addOneCard(Card card) {
-        this.cards.add(card);
+        cards.add(card);
         return calculateHand();
     }
 
     public int calculateHand() {
         int value = 0;
-        boolean ace = false;
 
-        for (Card myCard : this.cards) {
-            if (myCard.getValue() > 10) {
-                value += 10;
-            }
-                if (myCard.getValue() == 1) {
-                ace = true;
+        for (Card myCard : cards) {
+            if (myCard.getCardValue() == 11 && value + 11 > 21){
                 value += 1;
             } else {
-                value += myCard.getValue();
+                value += myCard.getCardValue();
             }
         }
 

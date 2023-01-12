@@ -10,7 +10,7 @@ package labs_examples.exception_handling.labs;
 
     class ExceptionLabSeven {
 
-        public static void main(String[] args) throws MySpecialException {
+        public static void main(String[] args) {
 
 
             try  {

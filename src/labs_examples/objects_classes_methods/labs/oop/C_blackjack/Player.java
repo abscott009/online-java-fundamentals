@@ -1,26 +1,22 @@
 package labs_examples.objects_classes_methods.labs.oop.C_blackjack;
 
 public class Player {
-
-    private Hand hand;
     private String name;
     private int wallet;
+    private Hand hand;
 
-    public Player() {
-
-    }
-
-    public Player(String name, int wallet) {
+    public Player(String name) {
         this.name = name;
         this.hand = new Hand();
         this.wallet = 100;
     }
 
+
     public Hand getHand() {
         return hand;
     }
 
-    public  void setHand(Hand hand) {
+    public void setHand(Hand hand) {
         this.hand = hand;
     }
 
@@ -32,21 +28,17 @@ public class Player {
         this.wallet = wallet;
     }
 
-
-
-        public void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
-    public String getName() {
 
+    public String getName() {
         return name;
     }
 
-        public int addOneCard(Card card) {
+    public int addOneCard(Card card) {
         return hand.addOneCard(card);
     }
-
-
 
 
 }

@@ -1,46 +1,7 @@
 package labs_examples.objects_classes_methods.labs.oop.C_blackjack;
 
-import java.util.Scanner;
-
 public class BlackjackController {
-//    public static List<Player> populateTable() {
-//        List<String> playerNames = new ArrayList<>();
-//
-//        List<Player> table = new ArrayList<>();
-//        Scanner sc = new Scanner(System.in);
-//        System.out.println("Number of players at table: ");
-//        int numPlayers = sc.nextInt();
-//
-//        for (int loop = 1; loop <= numPlayers; loop += 1) {
-//            boolean nameValid = false;
-//
-//            while (!nameValid) {
-//                System.out.println("Player " + loop + " please enter your name");
-//                String playerName = sc.next();
-//
-//                if (playerNames.contains(playerName)) {
-//                    System.out.println("Different name");
-//                    continue;
-//                }
-//
-//                if (playerName.length() > 0) {
-//                    playerNames.add(playerName);
-//
-//                    nameValid = true;
-//                }
-//            }
-//        }
-//
-//        sc.close();
-//
-//        for (String playerName : playerNames) {
-//            Player player = new Player();
-//            player.setName(playerName);
-//            table.add(player);
-//        }
-//
-//        return table;
-//    }
+
 
     private static void Count(){
         int playerWin = 0;
@@ -51,51 +12,97 @@ public class BlackjackController {
 
     public static void main(String[] args) {
 
-//        Card card = new Card();
         Deck deck = new Deck();
-        Player player = new Player();
-        Player dealer = new Player();
 
-//        for (Card card : deck.getCards()) {
-//            System.out.println(card.getValue() +  " " + card.getSuit());
+        System.out.println(deck.getCards());
+    }
+
+//        //Populate Players
+////    public static List<Player> populateTable() {
+////        List<String> playerNames = new ArrayList<>();
+////
+////        List<Player> table = new ArrayList<>();
+////        Scanner sc = new Scanner(System.in);
+////        System.out.println("Number of players at table: ");
+////        int numPlayers = sc.nextInt();
+////
+////        for (int loop = 1; loop <= numPlayers; loop += 1) {
+////            boolean nameValid = false;
+////
+////            while (!nameValid) {
+////                System.out.println("Player " + loop + " please enter your name");
+////                String name = sc.next();
+////
+////                if (playerNames.contains(name)) {
+////                    System.out.println("Different name");
+////                    continue;
+////                }
+////
+////                if (name.length() > 0) {
+////                    playerNames.add(name);
+////
+////                    nameValid = true;
+////                }
+////            }
+////        }
+////
+////        sc.close();
+////
+////        for (String name : playerNames) {
+////            Player player = new Player();
+////            player.setName(name);
+////            table.add(player);
+////        }
+////
+////        return table;
+////    }
+//
+////        Card card = new Card();
+//
+//        Deck deck = new Deck();
+//        Player player = new Player();
+//        Player dealer = new Player();
+//
+////        for (Card card : deck.getCards()) {
+////            System.out.println(card.getValue() +  " " + card.getSuit());
+////        }
+//
+//        Scanner bet = new Scanner(System.in);
+//
+//
+//        // for (int betLoop = 1; betLoop <= populateTable().size(); betLoop += 1) {
+//        System.out.println("Place your bet:");
+//        int bets = bet.nextInt();
+//
+//        if (bets > player.getWallet()) {
+//            System.out.println("Max bet is " + player.getWallet());
+//            return;
 //        }
-
-        Scanner bet = new Scanner(System.in);
-
-
-        // for (int betLoop = 1; betLoop <= populateTable().size(); betLoop += 1) {
-        System.out.println("Place your bet:");
-        int bets = bet.nextInt();
-
-        if (bets > player.getWallet()) {
-            System.out.println("Max bet is " + player.getWallet());
-            return;
-        }
-
-        for (int deal = 1; deal <= 2; deal++) {
-            player.addOneCard(deck.dealOneCard());
-        }
-
-        for (Card card : player.getHand().getCards()) {
-            System.out.println(card);
-        }
-
-        Hand playerOneHand = player.getHand();
-        int value = playerOneHand.calculateHand();
-        System.out.println("HAND VALUE: " + value);
-
-        Scanner hitStand = new Scanner(System.in);
-        System.out.println("Hit (H) or Stand (S)? ");
-        String call = hitStand.nextLine();
-
-        if (call.equalsIgnoreCase("H")) {
-            Card card = deck.dealOneCard();
-            System.out.println(card.getValue() + " " + card.getSuit());
-        }
-        else if (call.equalsIgnoreCase("S")) {
-            System.out.println("Player has: " + player.getHand());
-        }
-        }
+//
+//        for (int deal = 1; deal <= 2; deal++) {
+//            player.addOneCard(deck.dealOneCard());
+//        }
+//
+//        for (Card card : player.getHand().getCards()) {
+//            System.out.println(card);
+//        }
+//
+//        Hand playerOneHand = player.getHand();
+//        int value = playerOneHand.calculateHand();
+//        System.out.println("HAND VALUE: " + value);
+//
+//        Scanner hitStand = new Scanner(System.in);
+//        System.out.println("Hit (H) or Stand (S)? ");
+//        String call = hitStand.nextLine();
+//
+//        if (call.equalsIgnoreCase("H")) {
+//            Card card = deck.dealOneCard();
+//            System.out.println(card.getValue() + " " + card.getSuit());
+//        }
+//        else if (call.equalsIgnoreCase("S")) {
+//            System.out.println("Player has: " + player.getHand());
+//        }
+//        }
 
 
 //        player.hit(deck.dealOneCard());
